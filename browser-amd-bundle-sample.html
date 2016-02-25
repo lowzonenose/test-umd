@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- requirejs -->
+    <script src="./lib/require.js"></script>
+</head>
+<body>
+<script>
+	/* global requirejs */
+        requirejs.config({
+            'baseUrl' : "./src/",
+            'paths': {
+                // bundle
+                "bundle" : "../umd/test",
+                // lib
+                "leaflet" : "../lib/leaflet-src"
+            }
+        });
+        requirejs(["bundle"],
+        function (bundle) {
+		  console.log(L);
+		  console.log(Gp); 
+		  console.log(bundle);
+		  console.log(proj4);
+	  });
+</script>
+</body>
+</html>
