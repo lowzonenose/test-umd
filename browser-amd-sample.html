@@ -11,15 +11,16 @@
             'baseUrl' : "./src/",
             'paths': {
                 // lib
-                "leaflet" : "../lib/leaflet-src",
+                "leaflet" : "../lib/1.0.0/leaflet-src",
                 "proj4" : "../lib/proj4-src",
-                "proj4leaflet" : "../lib/proj4leaflet-src"
+                "proj4leaflet-1.0.x" : "../lib/1.0.0/proj4leaflet-src",
+                "proj4leaflet-0.7.x" : "../lib/proj4leaflet-src",
             }
         });
-        
-        requirejs(["test", "gp"], function (Test, Gp) {
+
+        requirejs(["test", "gp", "proj4"], function (Test, Gp, proj4) {
 		  console.log(L);
-		  console.log(Gp); 
+		  console.log(Gp);
 		  console.log(Test);
 		  console.log(proj4);
 	  });

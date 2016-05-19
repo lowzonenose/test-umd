@@ -8,7 +8,8 @@ gulp.task("requirejs", function (taskReady) {
         var deps    = {
             leaflet : "empty:",
             proj4 : "../lib/proj4-src",
-            proj4leaflet : "../lib/proj4leaflet-src",
+            "proj4leaflet-0.7.x" : "../lib/proj4leaflet-src",
+            "proj4leaflet-1.0.x" : "../lib/1.0.0/proj4leaflet-src",
         };
 
         requirejs.optimize({
@@ -63,9 +64,9 @@ gulp.task("requirejs", function (taskReady) {
             process.exit(1);
         });
     });
-    
-gulp.task("umd", function () {
-	
+
+gulp.task("umd", ["requirejs"], function () {
+
 	return gulp.src("./js/*.js")
             .pipe(umd({
                 exports: function (file) {

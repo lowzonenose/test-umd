@@ -1,7 +1,7 @@
-define(['leaflet', 'proj4', 'proj4leaflet'], function (L, proj4) {
+define(['leaflet', 'myproj'], function (L, MyProj) {
 	  var test = {};
-	  test.proj4 = proj4;
-	  test.proj4leaflet = L.Proj;
+	  test.proj4 = MyProj.getProj4();
+	  test.proj4leaflet = MyProj.getProj4Leaflet();
 	  test.leaflet = L;
 	  return test;
 });
