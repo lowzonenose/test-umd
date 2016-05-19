@@ -13,13 +13,13 @@
                 // bundle
                 "bundle" : "../umd/test",
                 // lib
-                "leaflet" : "../lib/leaflet-src"
+                "leaflet" : "../lib/1.0.0/leaflet-src"
             }
         });
         requirejs(["bundle"],
         function (bundle) {
 		  console.log(L);
-		  console.log(Gp); 
+		  console.log(Gp);
 		  console.log(bundle);
 		  console.log(proj4);
 	  });
